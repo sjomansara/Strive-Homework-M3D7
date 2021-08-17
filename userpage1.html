@@ -40,21 +40,6 @@
 
 <body>
 
-<!-- Ex2) -->
-
-<form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="displaySearch()">
-  Search
-</button>
-</form>
-
-<select>
-  <option value="name">Name</option>
-  <option value="username">Username</option>
-  <option value="email">Email</option>
-</select>
-
 <div class="container">
         <div class="row">
 
@@ -103,34 +88,21 @@
             const row = document.querySelector(".row")
 
             console.log("users is: ", users)
-
-            for (let i = 0; i < users.length; i++) {
               row.innerHTML += `
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="/userpage1.html">${users[i].name}</a></h5>
+                            <h5 class="card-title">${users[0].name}</h5>
+                            <p class="card-text">${users[0].username}</p>
+                            <p class="card-text">${users[0].email}</p>
+                            <!-- <p class="card-text">${users[0].address}</p> -->
+                            <p class="card-text">${users[0].phone}</p>
+                            <p class="card-text">${users[0].website}</p>
                         </div>
                     </div>
                 </div>
                      `
-            }
         }
-
-        const displaySearch = function(userData){
-
-        let searchResults = document.querySelector(".modal-body")
-        for(list of result)
-        {
-            searchResults.innerHTML += `<div class="card mb-5">
-            <div class="card-body">
-              <p class="card-title">${users[i].name}</p>
-              <p class="card-text">${users[i].username}</p>
-              <p class="card-text">${users[i].email}</p>
-            </div>
-            `
-        }
-    }
 
   </script>
 </body>
