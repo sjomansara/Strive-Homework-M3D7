@@ -81,10 +81,10 @@
           let userData = await response.json();
           return userData
         };
-        fetchData().then(response => displayNames(response))
+        fetchData().then(response => displayUserInfo(response))
       };
 // Ex3)
-      function displayNames(users) {
+      function displayUserInfo(users) {
             const row = document.querySelector(".row")
 
             console.log("users is: ", users)
